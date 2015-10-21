@@ -9,8 +9,10 @@ $ npm install react-nest-link-state
 
 ### Example
 ```js
-var reactDeepLinkState = require('react-nest-link-state');
+var NestLinkedStateMixin = require('react-nest-link-state');
 ```
+
+    mixins: [NestLinkedStateMixin],
 
 ### API
 
