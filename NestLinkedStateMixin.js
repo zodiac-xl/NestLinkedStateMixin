@@ -1,3 +1,5 @@
+require('babel/register');
+
 var NestLinkedStateMixin = {
 
     nestObject(object, stateArr){
