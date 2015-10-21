@@ -1,6 +1,6 @@
 {
   "name": "react-deep-link-state",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "A React mixin for linking form fields to a deep structure of data within the component's state.",
   "main": "NestLinkedStateMixin.js",
   "scripts": {
@@ -29,5 +29,9 @@
   "homepage": "https://github.com/zodiac-xl/NestLinkedStateMixin",
   "dependencies": {
     "react": "^0.14.0"
+  },
+  "_npmUser": {
+    "name": "wuxiaolong",
+    "email": "wxlgame0105@163.com"
   }
 }
