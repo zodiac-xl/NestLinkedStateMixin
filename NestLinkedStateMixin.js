@@ -75,26 +75,25 @@ var NestLinkedStateMixin = {
             var newObject = object;
             var splice = (new Array()).splice;
             var ags = arguments;
-            var newArr;
 
             switch (length) {
                 case 1:
-                    newArr = splice.apply(newObject[stateArr[0]], ags);
+                    splice.apply(newObject[stateArr[0]], ags);
                     break;
                 case 2:
-                    newArr = splice.apply(newObject[stateArr[0]][stateArr[1]], ags);
+                    splice.apply(newObject[stateArr[0]][stateArr[1]], ags);
                     break;
                 case 3:
-                    newArr = splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]], ags);
+                   plice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]], ags);
                     break;
                 case 4:
-                    newArr = splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]], ags);
+                    splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]], ags);
                     break;
                 case 5:
-                    newArr = splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]], ags);
+                    splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]], ags);
                     break;
             }
-            return this.setValue(newArr);
+            return newObject;
         };
         return {
             getValue: getValue,
