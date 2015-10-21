@@ -30,18 +30,23 @@ check this file: `NestLinkedStateMixin.js`
             ]
         }
     },
-    this.state ={
-    }
-    
+
 * nestLinkedState
     
-        let context = this; //default this;you can set parent context to modify parent state  
-        valueLink={this.nestLinkedState(["a",0,"b",1],context)}  //bind to this.state.a[0].b[1]   is 2
+        let context = this; 
+        //default this;you can set parent context to modify parent state  
+        
+        valueLink={this.nestLinkedState(["a",0,"b",1],context)}  
+        //bind to this.state.a[0].b[1]   is 2
         
 * nestObject {getValue,setValue,arrSplice,arrPush}
         
-        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue()}  // result 2
-        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue(3)}  // return newObject
+        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue()}  
+        // result 2
+        
+        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue(3)}  
+        // return newObject
+        
         
             {
                 a: [
@@ -54,7 +59,8 @@ check this file: `NestLinkedStateMixin.js`
                 ]
             }
                     
-          newState = {this.nestObject(this.state,["a",0,"b"]).arrSplice(0,2)}  // equal array.splice but return hole Object
+          newState = {this.nestObject(this.state,["a",0,"b"]).arrSplice(0,2)}  
+          // equal array.splice but return hole Object
 
             
                 {
