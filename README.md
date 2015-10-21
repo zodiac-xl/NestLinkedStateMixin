@@ -4,17 +4,70 @@ A React mixin for linking form fields to a deep structure of data within the com
 
 ### Installation
 ```bash
-$ npm install react-deep-link-state
+$ npm install react-nest-link-state
 ```
 
 ### Example
 ```js
-var reactDeepLinkState = require('react-deep-link-state');
+var reactDeepLinkState = require('react-nest-link-state');
 ```
 
 ### API
-check this file: `NestLinkedStateMixin.js`
 
+check this file: `NestLinkedStateMixin.js`
+    
+    getInitialState () {
+        return {
+            a: [
+                {
+                    b: [1, 2]
+                },
+                {
+                    c: [2, 3]
+                }
+            ]
+        }
+    },
+    this.state ={
+    }
+    
+* nestLinkedState
+    
+        let context = this; //default this;you can set parent context to modify parent state  
+        valueLink={this.nestLinkedState(["a",0,"b",1],context)}  //bind to this.state.a[0].b[1]   is 2
+        
+* nestObject {getValue,setValue,arrSplice,arrPush}
+        
+        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue()}  // result 2
+        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue(3)}  // return newObject
+        
+            {
+                a: [
+                    {
+                        b: [1, 3]
+                    },
+                    {
+                        c: [2, 3]
+                    }
+                ]
+            }
+                    
+          newState = {this.nestObject(this.state,["a",0,"b"]).arrSplice(0,2)}  // equal array.splice but return hole Object
+
+            
+                {
+                    a: [
+                        {
+                            b: []
+                        },
+                        {
+                            c: [2, 3]
+                        }
+                    ]
+                }
+                
+         arrPush is short for   arrSplice   
+                
 ### Contributing
 - Fork this Repo first
 - Clone your Repo
