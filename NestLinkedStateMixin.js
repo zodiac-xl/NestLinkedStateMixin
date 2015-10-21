@@ -85,7 +85,7 @@ var NestLinkedStateMixin = {
                     newArr = splice.apply(newObject[stateArr[0]][stateArr[1]], ags);
                     break;
                 case 3:
-                    newArr = splice.apply(newObject[stateArr[0]][stateArr[2]][stateArr[2]], ags);
+                    newArr = splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]], ags);
                     break;
                 case 4:
                     newArr = splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]], ags);
