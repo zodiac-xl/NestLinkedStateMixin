@@ -44,7 +44,7 @@ check this file: `NestLinkedStateMixin.js`
         newState = {this.nestObject(this.state,["a",0,"b",1]).getValue()}  
         // result 2
         
-        newState = {this.nestObject(this.state,["a",0,"b",1]).getValue(3)}  
+        newState = {this.nestObject(this.state,["a",0,"b",1]).setValue(3)}  
         // return newObject
         
         
