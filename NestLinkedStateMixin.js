@@ -1,14 +1,13 @@
-require('babel/register');
 
 var NestLinkedStateMixin = {
 
     nestObject(object, stateArr){
-        let length = stateArr.length;
+        var  length = stateArr.length;
 
 
-        let getValue = ()=> {
-            let value;
-            let newObj = object;
+        var getValue = function(){
+            var value;
+            var newObj = object;
             switch (length) {
                 case 1:
                     value = newObj[stateArr[0]];
@@ -29,8 +28,8 @@ var NestLinkedStateMixin = {
             return value;
         };
 
-        let setValue = (newValue)=> {
-            let newObject = object;
+        var setValue = function(newValue) {
+            var newObject = object;
             switch (length) {
                 case 1:
                     newObject[stateArr[0]] = newValue;
@@ -50,8 +49,8 @@ var NestLinkedStateMixin = {
             }
             return newObject;
         };
-        let arrPush = (item)=> {
-            let newObject = object;
+        var arrPush = function(item) {
+            var newObject = object;
             switch (length) {
                 case 1:
                     newObject[stateArr[0]].push(item);
@@ -72,11 +71,11 @@ var NestLinkedStateMixin = {
             return newObject;
         };
 
-        let arrSplice = ()=> {
-            let newObject = object;
-            let splice = (new Array()).splice;
-            let ags = arguments;
-            let newArr;
+        var arrSplice = function() {
+            var newObject = object;
+            var splice = (new Array()).splice;
+            var ags = arguments;
+            var newArr;
 
             switch (length) {
                 case 1:
@@ -109,9 +108,9 @@ var NestLinkedStateMixin = {
             context = this;
         }
 
-        let targetState;
-        let length = stateArr.length;
-        let newState = context.state;
+        var targetState;
+        var length = stateArr.length;
+        var newState = context.state;
 
 
         targetState = this.nestObject(newState, stateArr).getValue();
@@ -141,5 +140,4 @@ var NestLinkedStateMixin = {
         }
     }
 };
-
-export default NestLinkedStateMixin;
+module.exports = NestLinkedStateMixin;

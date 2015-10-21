@@ -1,6 +1,6 @@
 {
   "name": "react-nest-link-state",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A React mixin for linking form fields to a deep structure of data within the component's state.",
   "main": "NestLinkedStateMixin.js",
   "scripts": {
@@ -17,7 +17,9 @@
     "link",
     "state",
     "form",
-    "array"
+    "array",
+    "nest",
+    "object"
   ],
   "author": {
     "name": "zodiac"
@@ -28,7 +30,6 @@
   },
   "homepage": "https://github.com/zodiac-xl/NestLinkedStateMixin",
   "dependencies": {
-    "babel": "^5.8.23",
     "react": "^0.14.0"
   },
   "_npmUser": {
