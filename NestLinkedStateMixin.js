@@ -112,7 +112,7 @@ var NestLinkedStateMixin = {
         var newState = context.state;
 
 
-        targetState = this.nestObject(newState, stateArr).getValue();
+        targetState = NestLinkedStateMixin.nestObject(newState, stateArr).getValue();
 
         return {
             value: targetState,
