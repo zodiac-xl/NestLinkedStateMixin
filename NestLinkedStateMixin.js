@@ -140,7 +140,7 @@ var NestLinkedStateMixin = {
                         newState[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]] = newValue;
                         break;
                     case 8:
-                        newState[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[6]][stateArr[6]][stateArr[8]] = newValue;
+                        newState[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[6]][stateArr[7]][stateArr[8]] = newValue;
                         break;
                 }
                 context.setState(newState);
