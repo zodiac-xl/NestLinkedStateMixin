@@ -24,6 +24,15 @@ var NestLinkedStateMixin = {
                 case 5:
                     value = newObj[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]];
                     break;
+                case 6:
+                    value = newObj[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]];
+                    break;
+                case 7:
+                    value = newObj[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]];
+                    break;
+                case 8:
+                    value = newObj[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]][stateArr[7]];
+                    break;
             }
             return value;
         };
@@ -46,6 +55,15 @@ var NestLinkedStateMixin = {
                 case 5:
                     newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]] = newValue;
                     break;
+                case 6:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]] = newValue;
+                    break;
+                case 7:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[5]] = newValue;
+                    break;
+                case 8:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]][stateArr[7]] = newValue;
+                    break;
             }
             return newObject;
         };
@@ -66,6 +84,15 @@ var NestLinkedStateMixin = {
                     break;
                 case 5:
                     newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]].push(item);
+                    break;
+                case 6:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]].push(item);
+                    break;
+                case 7:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]].push(item);
+                    break;
+                case 8:
+                    newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]][stateArr[7]].push(item);
                     break;
             }
             return newObject;
@@ -91,6 +118,15 @@ var NestLinkedStateMixin = {
                     break;
                 case 5:
                     splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]], ags);
+                    break;
+                case 6:
+                    splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]], ags);
+                    break;
+                case 7:
+                    splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]], ags);
+                    break;
+                case 8:
+                    splice.apply(newObject[stateArr[0]][stateArr[1]][stateArr[2]][stateArr[3]][stateArr[4]][stateArr[5]][stateArr[6]][stateArr[7]], ags);
                     break;
             }
             return newObject;
