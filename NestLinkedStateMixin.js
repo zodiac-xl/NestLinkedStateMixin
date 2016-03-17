@@ -1,7 +1,7 @@
 
 var NestLinkedStateMixin = {
 
-    nestObject(object, stateArr){
+    nestObject:function(object, stateArr){
         var  length = stateArr.length;
 
 
